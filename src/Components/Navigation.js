@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useTransition, animated } from 'react-spring';
+import { Link } from "react-router-dom";
 
 function Navigation() {
     const [showMenu, setShowMenu] = useState(false)
@@ -50,9 +51,20 @@ function Navigation() {
                             Menu
                         </span>
                         <ul>
-                            <li>Home</li>
-                            <li>About</li>
-                            <li>Contact</li>
+                            <li>
+                                <Link
+                                    to="/"
+                                    className="text-blue-500"
+                                    onClick={() => setShowMenu(false)}
+                                >Home</Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/about"
+                                    className="text-blue-500"
+                                    onClick={() => setShowMenu(false)}
+                                >About</Link>
+                            </li>
                         </ul>
 
 
