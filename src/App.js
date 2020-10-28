@@ -1,13 +1,16 @@
 import React from 'react';
-import HelloWorld from './Components/HelloWorld'
-import Header from './Components/Header'
-import Footer from './Components/Footer'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import HelloWorld from './Components/HelloWorld'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
+import Home from './Views/Home'
+import About from './Views/About'
+
 
 
 function App() {
@@ -17,13 +20,12 @@ function App() {
       <Router>
         <Header />
 
-        <HelloWorld name="jared" />
         <Switch>
           <Route exact path="/">
-            <h1 className="font-bold text-2xl">This is the home page</h1>
+            <Home />
           </Route>
           <Route path="/about">
-            <h1 className="font-bold text-2xl">This is the about page</h1>
+            <About />
           </Route>
         </Switch>
         <Footer />
